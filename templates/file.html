@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <link href="static/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <form action="/submit" method="POST">
+    <label for="user">Username:</label>
+    <input type="text" id="user" name="user" />
+    <labe for="password">Password</labe>
+    <input type="password" id="password" name="password" />
+    <input type="submit" id=submitButton value="Save" />
+  </form>
+
+  {% if user %}
+    Submitted username: {{ user }} <br />
+  {% endif %}
+  {% if password %}
+  Submitted password: {{ password }} <br />
+{% endif %}
+</body>
+
+</html>
